@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        @font-face {
+            font-family: 'Love'; 
+            src: url('love lary.otf') format('opentype'); /* para usar fontes baixadas */
+
+            /* 
+            tipos de format()
+            - opentype (otf)
+            - truetype (ttf)
+            - embedded-opentype
+            - truetype-aat (Apple Advanced Typography)
+            - svg
+
+            usar duas url uma com otf e outra com ttf
+            */
+        }
+        body {
+            font-family: 'Love', serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dicta, ut ex blanditiis voluptate ipsa quas aliquam omnis aperiam facere odit, veniam praesentium aliquid esse necessitatibus, perferendis illo repudiandae consequatur!</p>
+</body>
+</html>
