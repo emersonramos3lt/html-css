@@ -53,40 +53,36 @@ menu > ul > li > a:hover {
     background-color: gray;
 }
 
-main {
-    width: 90vw;
-    background-color: #fff;
-    margin: auto;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-article > h2 {
-    padding-bottom: 20px;
-}
-
-article > p {
-    text-align: justify;
-    margin-bottom: 20px;
-    text-indent: 20px;
-}
-
-@media screen and (min-width: 768px) {
+@media only screen and (max-width: 600px) {
     span#burguer {
-        display: none;
+        display: block; /* Mostra o ícone do menu hamburguer em telas menores */
     }
 
     menu {
-        display: block;
+        display: none; /* Inicialmente, oculte o menu completo em telas menores */
     }
 
-    menu ul li {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+    menu.show {
+        display: block; /* Mostra o menu completo quando a classe 'show' é aplicada */
+    }
+}
 
+@media only screen and (min-width: 601px) {
+    span#burguer {
+        display: none; /* Oculta o ícone do menu hamburguer em telas maiores */
     }
 
+    menu {
+        display: flex;
+        justify-content: center; /* Mostra o menu completo em telas maiores */
+    }
 
+    menu li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    menu.show {
+        display: block; /* Mantém a classe 'show' para o menu completo em telas maiores */
+    }
 }
